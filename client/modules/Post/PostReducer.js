@@ -1,4 +1,11 @@
-import { ADD_POST, EDIT_POST, ADD_POSTS, DELETE_POST, THUMB_UP_COMMENT, THUMB_DOWN_COMMENT } from './PostActions';
+import {
+  ADD_POST,
+  EDIT_POST,
+  ADD_POSTS,
+  DELETE_POST,
+  THUMB_UP_COMMENT,
+  THUMB_DOWN_COMMENT
+} from './PostActions';
 
 
 // Initial State

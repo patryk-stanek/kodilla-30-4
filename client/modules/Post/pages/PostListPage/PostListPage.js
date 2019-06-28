@@ -43,8 +43,16 @@ class PostListPage extends Component {
   render() {
     return (
       <div>
-        <PostCreateWidget addPost={this.handleAddPost} showAddPost={this.props.showAddPost} />
-        <PostList handleDeletePost={this.handleDeletePost} posts={this.props.posts} handleThumbUp={this.handleThumbUp} handleThumbDown={this.handleThumbDown}/>
+        <PostCreateWidget
+          addPost={this.handleAddPost}
+          showAddPost={this.props.showAddPost}
+        />
+        <PostList
+          handleDeletePost={this.handleDeletePost}
+          posts={this.props.posts}
+          handleThumbUp={this.handleThumbUp}
+          handleThumbDown={this.handleThumbDown}
+        />
       </div>
     );
   }
