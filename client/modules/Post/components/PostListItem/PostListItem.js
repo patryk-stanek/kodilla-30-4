@@ -16,7 +16,7 @@ function PostListItem(props) {
       </h3>
       <p className={styles['author-name']}><FormattedMessage id="by" /> {props.post.name}</p>
       <p className={styles['post-desc']}>{props.post.content}</p>
-      <p>votes: {props.post.votes}</p>
+      <p>Votes: {props.post.votes}</p>
       <p className={styles['post-action']}><a href="#" onClick={props.onDelete}><FormattedMessage id="deletePost" /></a></p>
       <hr className={styles.divider} />
     </div>
