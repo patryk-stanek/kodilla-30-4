@@ -18,8 +18,8 @@ const Navigation = (props) => (
         <nav>
             <div>
                 <ul style={divStyle}>
-                    <li style={childStyle}><Link to='/'>Home</Link></li>
-                    <li style={childStyle}><Link to='/posts'>Posts</Link></li>
+                    <li style={childStyle}><Link to='/home'>Home</Link></li>
+                    <li style={childStyle}><Link to='/'>Posts</Link></li>
                     <li style={childStyle}><Link to='/about'>About</Link></li>
                 </ul>
             </div>
