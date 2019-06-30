@@ -3,26 +3,16 @@ import PropTypes from 'prop-types';
 
 import { Link } from 'react-router';
 
-const divStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    listStyle: 'none'
-}
-
-const childStyle = {
-    margin: '0 10px'
-}
+import styles from './Navigation.css';
 
 const Navigation = (props) => (
     <div>
         <nav>
-            <div>
-                <ul style={divStyle}>
-                    <li style={childStyle}><Link to='/home'>Home</Link></li>
-                    <li style={childStyle}><Link to='/'>Posts</Link></li>
-                    <li style={childStyle}><Link to='/about'>About</Link></li>
-                </ul>
-            </div>
+            <ul className={styles['nav-list']}>
+                <li className={styles['nav-item']}><Link to='/home'>Home</Link></li>
+                <li className={styles['nav-item']}><Link to='/'>Posts</Link></li>
+                <li className={styles['nav-item']}><Link to='/about'>About</Link></li>
+            </ul>
         </nav>
         <div>
             {props.children}

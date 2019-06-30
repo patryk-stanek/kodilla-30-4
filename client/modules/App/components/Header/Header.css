@@ -33,6 +33,13 @@
   float: right;
 }
 
+.navigation {
+  width: 980px;
+  margin: auto;
+  text-align: right;
+  padding: 10px 0;
+}
+
 .language-switcher {
   background: rgba(0, 0, 0, 0.1);
 }

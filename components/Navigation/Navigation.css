@@ -1,0 +1,16 @@
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #03A9F4;
+}

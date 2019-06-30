@@ -3,8 +3,6 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from './modules/App/App';
 
-import Navigation from '../components/Navigation/Navigation';
-
 // require.ensure polyfill for node
 if (typeof require.ensure !== 'function') {
   require.ensure = function requireModule(deps, callback) {
@@ -27,39 +25,37 @@ if (process.env.NODE_ENV !== 'production') {
 // react-router setup with code-splitting
 // More info: http://blog.mxstbr.com/2016/01/react-apps-with-pages/
 export default (
-  <Route component={Navigation}>
-    <Route path="/" component={App}>
-      <IndexRoute
-        getComponent={(nextState, cb) => {
-          require.ensure([], require => {
-            cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);
-          });
-        }}
-      />
-      <Route
-        path="/posts/:slug-:cuid"
-        getComponent={(nextState, cb) => {
-          require.ensure([], require => {
-            cb(null, require('./modules/Post/pages/PostDetailPage/PostDetailPage').default);
-          });
-        }}
-      />
-      <Route
-        path='/home'
-        getComponent={(nextState, cb) => {
-          require.ensure([], require => {
-            cb(null, require('./modules/Home/Home').default);
-          });
-        }}
-      />
-      <Route 
-        path='/about'
-        getComponent={(nextState, cb) => {
-          require.ensure([], require => {
-            cb(null, require('./modules/About/About').default);
-          });
-        }}
-      />
-    </Route>
+  <Route path="/" component={App}>
+    <IndexRoute
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/posts/:slug-:cuid"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Post/pages/PostDetailPage/PostDetailPage').default);
+        });
+      }}
+    />
+    <Route
+      path='/home'
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Home/Home').default);
+        });
+      }}
+    />
+    <Route 
+      path='/about'
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/About/About').default);
+        });
+      }}
+    />
   </Route>
 );
